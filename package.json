@@ -1,0 +1,20 @@
+{
+  "name": "test-branch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pub": "sh scripts/build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fanwenlie/test-branch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fanwenlie/test-branch/issues"
+  },
+  "homepage": "https://github.com/fanwenlie/test-branch#readme"
+}
