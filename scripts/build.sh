@@ -9,13 +9,18 @@ TAG_VERSION=v$VERSION
 
 echo "Releasing $VERSION ..."
 
-# git add -A
-# git commit -m "[build] $VERSION"
+# 如果有输出，则说明需要commit
+if test -n "$(git status --porcelain)"; 
+then
+  git add -A
+  git commit -m "[build] $VERSION"
+fi
+
 # npm version $VERSION --message "[release] $VERSION"
 git tag "$TAG_VERSION"
 
 # publish
-# git push origin main
+git push origin main
 git push origin $TAG_VERSION
 git checkout dev
 git rebase main
